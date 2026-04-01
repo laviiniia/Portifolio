@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+/* Ajuste das imagens para não estourarem a largura da tela */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 body {
     background-color: #F0F0F0;
@@ -202,13 +208,9 @@ body {
 .thanks-section {
     width: 100%;
     height: 1000px;
-    /* Ocupa a altura toda da tela */
-    /* Cria as linhas verticais e horizontais */
     background-image:
         linear-gradient(to right, rgba(0, 0, 0, 0.1) 3px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 3px, transparent 1px);
-
-    /* Define o tamanho de cada quadradinho da grade (20px por 20px) */
     background-size: 80px 80px;
     overflow: visible;
 }
@@ -228,4 +230,145 @@ body {
     margin: 50px auto auto auto;
     width: 97%;
     z-index: 100;
+}
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+/* Ajustes para tablets e telas médias (até 1024px) */
+
+
+@media (max-width: 1024px) {
+    .header-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .header-section {
+        margin-top: 0;
+        padding: 20px 0;
+    }
+
+    .portfolio-title {
+        margin-left: 0;
+        margin-top: 50px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .foto {
+        margin-left: 0;
+        grid-row: auto;
+    }
+
+    .informacoes {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .nome {
+        width: 60%;
+    }
+
+    .box-texto {
+        font-size: 24px;
+        height: auto;
+    }
+
+    .branding-section {
+        height: auto;
+        padding: 40px 20px;
+        border-radius: 60px 60px 0 0;
+    }
+
+    .web-design,
+    .identidade-visual {
+        margin-top: 40px;
+    }
+
+    .web-design-title,
+    .web-design-title-sky {
+        width: 30%;
+        margin-top: 40px;
+    }
+
+    .web-section {
+        height: auto;
+        border-radius: 60px 60px 0 0;
+        padding: 40px 20px;
+        margin-top: -20px;
+    }
+
+    .thanks-section {
+        height: auto;
+    }
+
+    .thanks-container {
+        height: auto;
+        padding: 10px 20px;
+        border-radius: 0 0 60px 60px;
+    }
+}
+
+/* Ajustes para celulares (até 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        overflow-x: hidden;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .box-texto {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .branding-section,
+    .web-section {
+        border-radius: 30px 30px 0 0;
+        padding: 30px 15px;
+    }
+
+    .thanks-container {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .identidade-visual {
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .web-design-title,
+    .web-design-title-sky {
+        width: 30%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .roda-pe {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Ajustes para celulares pequenos (até 600px) */
+@media (max-width: 600px) {
+    .box-texto {
+        font-size: 16px;
+    }
+
+    .portfolio-title,
+    .nome,
+    .web-design-title-sky,
+    .identidade-visual {
+        max-width: 90%;
+    }
+
+    .behance-link,
+    .git-link {
+        font-size: 16px;
+    }
 }
