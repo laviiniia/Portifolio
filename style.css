@@ -1,0 +1,331 @@
+/* --- RESET E ESTILOS BÁSICOS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+/* Ajustes para tablets e telas médias (até 1024px) */
+@media (max-width: 1024px) {
+    .header-grid {
+        grid-template-columns: 1fr;
+        /* Transforma o grid em uma única coluna */
+        text-align: center;
+    }
+
+    .informacoes {
+        margin-top: 50px;
+        /* Reduz o espaçamento excessivo no topo */
+        padding: 0 20px;
+    }
+
+    .portfolio-title {
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .foto {
+        margin-left: 0;
+    }
+
+    .box-texto {
+        font-size: 24px;
+        /* Reduz o tamanho da fonte para não transbordar */
+        height: auto;
+    }
+
+    .branding-section {
+        height: auto;
+        /* Permite que a seção cresça conforme o conteúdo */
+        padding: 40px 20px;
+    }
+}
+
+/* Ajustes para celulares (até 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        overflow-x: hidden;
+    }
+
+    .links {
+        flex-direction: column;
+        /* Links um embaixo do outro no celular */
+        gap: 10px;
+    }
+
+    .box-texto {
+        font-size: 18px;
+        /* Fonte legível para mobile */
+        text-align: center;
+    }
+
+    .branding-section,
+    .web-section,
+    .thanks-container {
+        border-radius: 60px 60px 0 0;
+        /* Suaviza as bordas arredondadas em telas pequenas */
+    }
+
+    /* Ajuste das imagens para não estourarem a largura da tela */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .identidade-visual,
+    .web-design-title,
+    .web-design-title-sky {
+        width: 80%;
+        /* Títulos maiores no mobile */
+    }
+
+    .thanks-section {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .thanks-container {
+        height: auto;
+        padding: 40px 10px;
+    }
+}
+
+/* Ajuste específico para a grade de fundo não ficar pesada visualmente */
+@media (max-width: 600px) {
+
+    .frases-topo,
+    .thanks-section {
+        background-size: 40px 40px;
+        /* Grade menor para telas pequenas */
+    }
+
+    .box-texto {
+        font-size: 13px;
+    }
+}
+
+body {
+    background-color: #F0F0F0;
+    /* Cor de fundo creme claro da página */
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    /* Largura máxima da página para não distorcer */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.section {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+/* --- SEÇÃO 1: CABEÇALHO E PERFIL --- */
+.header-section {
+    padding: 60px 0;
+    margin-top: -100px;
+    /* Alinhamento visual da régua */
+}
+
+.frases-topo {
+    width: 100%;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 3px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 3px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.portfolio-title {
+    margin-bottom: 50px;
+    object-fit: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    grid-row: 1 / 2;
+}
+
+.foto-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto {
+    grid-row: 2 / 4;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.behance-link,
+.git-link {
+    text-align: center;
+    text-decoration: none;
+    color: #353536;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    width: 100%;
+}
+
+.nome {
+    margin-top: 20px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+.box-texto {
+    margin-top: 20px;
+    margin-left: 0px;
+    width: 100%;
+    height: 19%;
+    font-size: 32px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    color: #353536/70;
+    padding: 0px;
+    padding-top: 5px;
+    font-weight: 600;
+}
+
+.icons {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- SEÇÃO 2: IDENTIDADE VISUAL - SHEEN --- */
+.branding-section {
+    background-color: #F8F4E3;
+    width: 100%;
+    height: 3100px;
+    padding: 80px;
+    border-radius: 120px 120px 0px 0px;
+    margin: 40px auto;
+    z-index: -1;
+}
+
+.branding-header {
+    margin-bottom: 20px;
+}
+
+/* --- SEÇÃO 3: WEB DESIGN - SHEEN --- */
+.web-design {
+    display: column;
+    margin-top: 200px;
+}
+
+.identidade-visual {
+    width: 45%;
+}
+
+.web-design-title {
+    width: 400px;
+}
+
+.web-design-title,
+.identidade-visual {
+    display: inline-flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+/* --- SEÇÃO 4: WEB DESIGN - SKYVIEW DRONE --- */
+.web-section {
+    background-color: #092E51;
+    border-radius: 120px 120px 0px 0px;
+    margin-top: -10%;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    z-index: 100;
+}
+
+.web-design-title-sky {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 400px;
+}
+
+.drone-bg {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* --- SEÇÃO 5: AGRADECIMENTO --- */
+.thanks-section {
+    width: 100%;
+    height: 1000px;
+    /* Ocupa a altura toda da tela */
+    /* Cria as linhas verticais e horizontais */
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 3px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 3px, transparent 1px);
+
+    /* Define o tamanho de cada quadradinho da grade (20px por 20px) */
+    background-size: 80px 80px;
+    overflow: visible;
+}
+
+.thanks-container {
+    background-color: #EFF0F2;
+    mix-blend-mode: multiply;
+    margin-top: 0px;
+    width: 100%;
+    height: 900px;
+    align-items: center;
+    border-radius: 0px 0px 120px 120px;
+}
+
+.roda-pe {
+    display: flex;
+    margin: 50px auto auto auto;
+    width: 97%;
+    z-index: 100;
+}
