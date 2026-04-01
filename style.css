@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Ajuste das imagens para não estourarem a largura da tela */
 img {
     max-width: 100%;
     height: auto;
@@ -14,7 +13,6 @@ img {
 
 body {
     background-color: #F0F0F0;
-    /* Cor de fundo creme claro da página */
     font-family: 'Lato', sans-serif;
     color: #333;
     overflow-x: hidden;
@@ -24,7 +22,6 @@ body {
     position: relative;
     width: 100%;
     max-width: 1600px;
-    /* Largura máxima da página para não distorcer */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -41,7 +38,6 @@ body {
 .header-section {
     padding: 60px 0;
     margin-top: -100px;
-    /* Alinhamento visual da régua */
 }
 
 .frases-topo {
